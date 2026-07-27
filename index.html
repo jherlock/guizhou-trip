@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2f6f58" />
+  <meta name="description" content="广州—贵州亲子自驾景点预约清单" />
+  <title>广州—贵州亲子自驾预约清单</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">7月29日—8月7日 · 10天9晚</p>
+        <h1>广州—贵州亲子自驾<br />景点预约 Checklist</h1>
+        <p class="hero__subtitle">广州 → 阳朔 → 肇兴 → 贵阳 → 香火岩 → 铜鼓荡 / 马岭河 → 黄果树 → 关岭 / 花江峡谷大桥 → 六盘水 → 玉舍 / 火把节 → 中国天眼 → 广州</p>
+      </div>
+      <div class="hero__icons" aria-hidden="true">🚗 🌄 🦕 🌉 🔭</div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="清单工具">
+        <label class="search-box">
+          <span class="sr-only">搜索清单</span>
+          <input id="searchInput" type="search" placeholder="搜索景点、日期或项目…" />
+        </label>
+        <button id="printButton" class="button button--secondary" type="button">打印</button>
+        <button id="resetButton" class="button button--danger" type="button">清空勾选</button>
+      </section>
+
+      <section class="progress-card" aria-label="完成进度">
+        <div class="progress-card__row"><strong>预约准备进度</strong><span id="progressText">0 / 0</span></div>
+        <div class="progress-track" aria-hidden="true"><span id="progressBar" class="progress-bar"></span></div>
+      </section>
+
+      <section class="filters" aria-label="分类筛选">
+        <button class="filter-chip is-active" type="button" data-filter="all">全部</button>
+        <button class="filter-chip" type="button" data-filter="must">必须预约</button>
+        <button class="filter-chip" type="button" data-filter="check">提前确认</button>
+        <button class="filter-chip" type="button" data-filter="free">通常免预约</button>
+        <button class="filter-chip" type="button" data-filter="todo">只看未完成</button>
+      </section>
+
+      <div id="checklist">
+        <section class="day-card" data-search="7月29日 阳朔 十里画廊 遇龙河 西街">
+          <div class="day-card__header"><h2>7月29日｜广州 → 阳朔</h2><p>十里画廊骑行、悦榕庄、西街</p></div>
+          <div class="checklist-item category-free"><label><input type="checkbox" data-id="d1-1" /><span class="custom-check"></span><span class="item-copy"><strong>十里画廊</strong><small>开放式沿线游览，一般无需预约；骑行车辆可现场租赁。</small></span><span class="status status--free">通常免预约</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d1-2" /><span class="custom-check"></span><span class="item-copy"><strong>遇龙河竹筏（如参加）</strong><small>暑期建议提前1—3天购票，并确认儿童身高、年龄及停航政策。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-free"><label><input type="checkbox" data-id="d1-3" /><span class="custom-check"></span><span class="item-copy"><strong>阳朔西街</strong><small>开放街区，无需预约。</small></span><span class="status status--free">通常免预约</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="7月30日 阳朔 兴坪古镇 漓江游船 酒店活动">
+          <div class="day-card__header"><h2>7月30日｜阳朔度假日</h2><p>酒店休闲，遇龙河或兴坪古镇备选</p></div>
+          <div class="checklist-item category-free"><label><input type="checkbox" data-id="d2-1" /><span class="custom-check"></span><span class="item-copy"><strong>兴坪古镇</strong><small>古镇本身一般无需预约。</small></span><span class="status status--free">通常免预约</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d2-2" /><span class="custom-check"></span><span class="item-copy"><strong>漓江游船 / 竹筏（如参加）</strong><small>旺季建议提前购票，并确认码头、班次和儿童政策。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d2-3" /><span class="custom-check"></span><span class="item-copy"><strong>阳朔悦榕庄亲子活动</strong><small>向酒店确认活动表、人数限制和收费情况。</small></span><span class="status status--check">提前确认</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="7月31日 肇兴侗寨 鼓楼 风雨桥 观光车 午餐">
+          <div class="day-card__header"><h2>7月31日｜阳朔 → 肇兴 → 贵阳</h2><p>侗家午餐、鼓楼、风雨桥</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d3-1" /><span class="custom-check"></span><span class="item-copy"><strong>肇兴侗寨门票</strong><small>暑期建议提前购票，并核对入园时段及证件要求。</small></span><span class="status status--must">建议预订</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d3-2" /><span class="custom-check"></span><span class="item-copy"><strong>肇兴侗寨观光车</strong><small>确认是否与门票联票、儿童收费及末班车时间。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d3-3" /><span class="custom-check"></span><span class="item-copy"><strong>侗家特色午餐</strong><small>多人家庭建议提前订桌，注明儿童人数和少辣需求。</small></span><span class="status status--check">提前订桌</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="8月1日 香火岩瀑布 天坑 coffee">
+          <div class="day-card__header"><h2>8月1日｜香火岩瀑布 → 天坑 Coffee</h2><p>瀑布、峡谷、天坑休闲</p></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d4-1" /><span class="custom-check"></span><span class="item-copy"><strong>香火岩瀑布</strong><small>提前确认营业、道路和雨季临时关闭信息；暴雨后谨慎前往。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d4-2" /><span class="custom-check"></span><span class="item-copy"><strong>天坑 Coffee</strong><small>确认营业时间、停车位置及多人座位，有条件可提前订位。</small></span><span class="status status--check">提前确认</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="8月2日 铜鼓荡 马岭河峡谷 电梯 黄果树">
+          <div class="day-card__header"><h2>8月2日｜铜鼓荡 → 马岭河峡谷 → 黄果树</h2><p>当天强度较高，建议早出发</p></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d5-1" /><span class="custom-check"></span><span class="item-copy"><strong>铜鼓荡开放与路况</strong><small>提前确认天气、停车、步行道路及现场开放情况。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d5-2" /><span class="custom-check"></span><span class="item-copy"><strong>马岭河峡谷门票</strong><small>暑期建议提前1—3天购票，并核对最晚入园时间。</small></span><span class="status status--must">必须关注</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d5-3" /><span class="custom-check"></span><span class="item-copy"><strong>马岭河观光电梯 / 景区交通</strong><small>确认是否单独购票、运行时间及儿童票政策。</small></span><span class="status status--check">提前确认</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="8月3日 黄果树 大瀑布 水帘洞 陡坡塘 坝陵河大桥">
+          <div class="day-card__header"><h2>8月3日｜黄果树核心路线 → 坝陵河大桥</h2><p>大瀑布、水帘洞、陡坡塘</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d6-1" /><span class="custom-check"></span><span class="item-copy"><strong>黄果树景区门票与入园时段</strong><small>全程最重要预约之一，暑期尽早购买并选择合适时段。</small></span><span class="status status--must">必须预约</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d6-2" /><span class="custom-check"></span><span class="item-copy"><strong>黄果树观光车</strong><small>核对是否已经包含在门票套票中。</small></span><span class="status status--must">必须确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d6-3" /><span class="custom-check"></span><span class="item-copy"><strong>大瀑布扶梯（按需要）</strong><small>老人、儿童或希望节省体力时可考虑购买。</small></span><span class="status status--check">按需购买</span></label></div>
+          <div class="checklist-item category-free"><label><input type="checkbox" data-id="d6-4" /><span class="custom-check"></span><span class="item-copy"><strong>坝陵河大桥观景</strong><small>普通观景通常无需预约；高空体验项目需另行购票。</small></span><span class="status status--free">观景免预约</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="8月4日 关岭化石 挖化石 花江峡谷大桥 六盘水">
+          <div class="day-card__header"><h2>8月4日｜关岭挖化石 → 花江峡谷大桥 → 六盘水</h2><p>古生物研学与超级桥梁</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d7-1" /><span class="custom-check"></span><span class="item-copy"><strong>关岭化石群门票</strong><small>提前确认开放时间、博物馆和体验区是否正常开放。</small></span><span class="status status--must">建议预订</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d7-2" /><span class="custom-check"></span><span class="item-copy"><strong>儿童挖化石体验</strong><small>当天关键项目，建议提前3—7天预约场次和年龄要求。</small></span><span class="status status--must">必须预约</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d7-3" /><span class="custom-check"></span><span class="item-copy"><strong>花江峡谷大桥观景区</strong><small>确认正式观景台开放、停车及景区接驳信息。</small></span><span class="status status--check">提前确认</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="8月5日 玉舍国家森林公园 海坪 火把节 野玉海">
+          <div class="day-card__header"><h2>8月5日｜玉舍森林公园 → 海坪火把节</h2><p>森林避暑与彝族节庆</p></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d8-1" /><span class="custom-check"></span><span class="item-copy"><strong>玉舍国家森林公园门票</strong><small>确认当日门票政策及营业时间。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d8-2" /><span class="custom-check"></span><span class="item-copy"><strong>观光车 / 小火车 / 山地项目</strong><small>确认开放项目、儿童身高年龄限制和购票方式。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d8-3" /><span class="custom-check"></span><span class="item-copy"><strong>海坪火把节当日节目表</strong><small>核对主会场、开始时间、点火时间、预约及交通管制。</small></span><span class="status status--must">必须确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d8-4" /><span class="custom-check"></span><span class="item-copy"><strong>海坪晚餐订桌</strong><small>火把节客流较大，建议提前订桌并尽早用餐。</small></span><span class="status status--check">提前订桌</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="8月6日 中国天眼 fast 平塘 天文体验馆">
+          <div class="day-card__header"><h2>8月6日｜六盘水 → 中国天眼</h2><p>FAST射电望远镜深度科普</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d9-1" /><span class="custom-check"></span><span class="item-copy"><strong>中国天眼景区门票</strong><small>全程最重要预约之一，建议提前3—7天实名购票。</small></span><span class="status status--must">必须预约</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="d9-2" /><span class="custom-check"></span><span class="item-copy"><strong>FAST观景台摆渡车 / 接驳</strong><small>核对套票内容、发车时段和最晚返程时间。</small></span><span class="status status--must">必须确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d9-3" /><span class="custom-check"></span><span class="item-copy"><strong>天文体验馆及科普项目</strong><small>确认是否单独预约、场次和儿童适龄项目。</small></span><span class="status status--check">提前确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="d9-4" /><span class="custom-check"></span><span class="item-copy"><strong>电子设备寄存规则</strong><small>提前了解手机、相机、智能手表等设备限制。</small></span><span class="status status--check">出发前确认</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="住宿 酒店 悦榕庄 安纳塔拉 黄果树至也 六盘水喜来登 天眼迎宾馆">
+          <div class="day-card__header"><h2>住宿与家庭多人安排</h2><p>统一确认入住人数、早餐、加床和儿童政策</p></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="h-1" /><span class="custom-check"></span><span class="item-copy"><strong>阳朔悦榕庄</strong><small>确认入住人数、儿童早餐、泳池及亲子活动。</small></span><span class="status status--check">酒店确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="h-2" /><span class="custom-check"></span><span class="item-copy"><strong>贵阳安纳塔拉</strong><small>确认房型、早餐人数及晚到入住安排。</small></span><span class="status status--check">酒店确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="h-3" /><span class="custom-check"></span><span class="item-copy"><strong>黄果树至也酒店</strong><small>确认晚到时间、早餐及前往游客中心的交通。</small></span><span class="status status--check">酒店确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="h-4" /><span class="custom-check"></span><span class="item-copy"><strong>六盘水喜来登</strong><small>确认火把节期间停车、晚归及儿童早餐安排。</small></span><span class="status status--check">酒店确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="h-5" /><span class="custom-check"></span><span class="item-copy"><strong>天眼迎宾馆</strong><small>确认早餐时间、景区交通及入住人数。</small></span><span class="status status--check">酒店确认</span></label></div>
+        </section>
+      </div>
+
+      <aside class="priority-note"><strong>优先处理：</strong>黄果树、中国天眼、关岭挖化石、马岭河峡谷、8月5日火把节节目和入场政策。建议出发前7天及前1天各复核一次。</aside>
+    </main>
+
+    <footer>勾选状态仅保存在当前浏览器中</footer>
+  </div>
+</body>
+</html>
