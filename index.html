@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#2f6f58" />
-  <meta name="description" content="广州—贵州亲子自驾景点预约清单" />
-  <title>广州—贵州亲子自驾预约清单</title>
+  <meta name="description" content="广州—贵州亲子自驾预约与物品清单" />
+  <title>广州—贵州亲子自驾旅行 Checklist</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
@@ -14,13 +14,18 @@
     <header class="hero">
       <div class="hero__copy">
         <p class="eyebrow">7月29日—8月7日 · 10天9晚</p>
-        <h1>广州—贵州亲子自驾<br />景点预约 Checklist</h1>
+        <h1>广州—贵州亲子自驾<br />旅行准备 Checklist</h1>
         <p class="hero__subtitle">广州 → 阳朔 → 肇兴 → 贵阳 → 香火岩 → 铜鼓荡 / 马岭河 → 黄果树 → 关岭 / 花江峡谷大桥 → 六盘水 → 玉舍 / 火把节 → 中国天眼 → 广州</p>
       </div>
       <div class="hero__icons" aria-hidden="true">🚗 🌄 🦕 🌉 🔭</div>
     </header>
 
     <main>
+      <nav class="section-tabs" aria-label="清单类型">
+        <button class="section-tab is-active" type="button" data-panel="reservationPanel">景点预约</button>
+        <button class="section-tab" type="button" data-panel="packingPanel">物品清单</button>
+      </nav>
+
       <section class="controls" aria-label="清单工具">
         <label class="search-box">
           <span class="sr-only">搜索清单</span>
@@ -43,6 +48,7 @@
         <button class="filter-chip" type="button" data-filter="todo">只看未完成</button>
       </section>
 
+      <div id="reservationPanel" class="checklist-panel is-active">
       <div id="checklist">
         <section class="day-card" data-search="7月29日 阳朔 十里画廊 遇龙河 西街">
           <div class="day-card__header"><h2>7月29日｜广州 → 阳朔</h2><p>十里画廊骑行、悦榕庄、西街</p></div>
@@ -118,11 +124,78 @@
           <div class="checklist-item category-check"><label><input type="checkbox" data-id="h-5" /><span class="custom-check"></span><span class="item-copy"><strong>天眼迎宾馆</strong><small>确认早餐时间、景区交通及入住人数。</small></span><span class="status status--check">酒店确认</span></label></div>
         </section>
       </div>
+      </div>
+
+      <div id="packingPanel" class="checklist-panel">
+        <section class="day-card" data-search="证件 资料 身份证 驾驶证 行驶证 酒店订单 门票">
+          <div class="day-card__header"><h2>证件与资料</h2><p>出发前统一放入随身包</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-doc-1" /><span class="custom-check"></span><span class="item-copy"><strong>成人与儿童身份证件</strong><small>身份证；儿童没有身份证时准备户口本或有效证件。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-doc-2" /><span class="custom-check"></span><span class="item-copy"><strong>驾驶证、行驶证</strong><small>确认均在有效期内。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-doc-3" /><span class="custom-check"></span><span class="item-copy"><strong>酒店与景区订单截图</strong><small>将二维码、订单号和联系电话保存到手机相册。</small></span><span class="status status--check">提前整理</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-doc-4" /><span class="custom-check"></span><span class="item-copy"><strong>银行卡与少量现金</strong><small>山区小店、停车或网络不稳定时备用。</small></span><span class="status status--check">建议携带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="车辆 自驾 ETC 充电器 充气泵 胎压 雨刮 玻璃水">
+          <div class="day-card__header"><h2>车辆与自驾用品</h2><p>山区长途驾驶重点检查</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-car-1" /><span class="custom-check"></span><span class="item-copy"><strong>车辆基础检查</strong><small>胎压、轮胎、刹车、雨刮、玻璃水、机油和油量。</small></span><span class="status status--must">出发前检查</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-car-2" /><span class="custom-check"></span><span class="item-copy"><strong>ETC与车载充电</strong><small>确认ETC正常；准备多口充电器、手机支架及数据线。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-car-3" /><span class="custom-check"></span><span class="item-copy"><strong>充气泵 / 补胎工具</strong><small>长途山区自驾建议随车准备。</small></span><span class="status status--check">建议携带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-car-4" /><span class="custom-check"></span><span class="item-copy"><strong>纸巾、湿巾、垃圾袋</strong><small>每排座位都留一份，方便儿童途中使用。</small></span><span class="status status--check">建议携带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="衣物 短袖 长裤 外套 睡衣 内衣 袜子 泳衣 儿童">
+          <div class="day-card__header"><h2>衣物与鞋子</h2><p>贵州雨季、山区早晚温差及瀑布湿区</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-cloth-1" /><span class="custom-check"></span><span class="item-copy"><strong>轻便夏装与换洗内衣</strong><small>按10天准备或计划途中洗衣；儿童适当多带1—2套。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-cloth-2" /><span class="custom-check"></span><span class="item-copy"><strong>薄外套与长裤</strong><small>六盘水、玉舍、火把节夜间及中国天眼早晚使用。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-cloth-3" /><span class="custom-check"></span><span class="item-copy"><strong>防滑运动鞋</strong><small>黄果树、香火岩、马岭河及森林步道使用。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-cloth-4" /><span class="custom-check"></span><span class="item-copy"><strong>备用鞋 / 防滑凉鞋</strong><small>鞋子淋湿时替换，也适合酒店及玩水。</small></span><span class="status status--check">建议携带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-cloth-5" /><span class="custom-check"></span><span class="item-copy"><strong>泳衣、泳帽</strong><small>用于悦榕庄、安纳塔拉或喜来登泳池。</small></span><span class="status status--check">按需携带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="雨具 防晒 雨衣 雨伞 手机防水袋 防晒霜 帽子 墨镜">
+          <div class="day-card__header"><h2>雨具与防晒</h2><p>瀑布、峡谷和贵州夏季天气必备</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-weather-1" /><span class="custom-check"></span><span class="item-copy"><strong>每人一件轻便雨衣</strong><small>瀑布和峡谷中比雨伞更方便。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-weather-2" /><span class="custom-check"></span><span class="item-copy"><strong>折叠雨伞与背包防雨罩</strong><small>城市散步及突发阵雨备用。</small></span><span class="status status--check">建议携带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-weather-3" /><span class="custom-check"></span><span class="item-copy"><strong>防水手机袋</strong><small>黄果树水帘洞、马岭河和香火岩拍摄时使用。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-weather-4" /><span class="custom-check"></span><span class="item-copy"><strong>防晒霜、帽子、墨镜</strong><small>高原紫外线较强，儿童优先使用防晒衣与遮阳帽。</small></span><span class="status status--must">必带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="药品 医疗 退烧药 温度计 蒙脱石散 益生菌 创可贴 驱蚊">
+          <div class="day-card__header"><h2>药品与健康用品</h2><p>儿童同行建议独立收纳</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-med-1" /><span class="custom-check"></span><span class="item-copy"><strong>儿童常用药与温度计</strong><small>退热药等仅携带平时医生建议或家庭熟悉的药物。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-med-2" /><span class="custom-check"></span><span class="item-copy"><strong>肠胃与补液用品</strong><small>益生菌、口服补液盐及家庭常用肠胃药。</small></span><span class="status status--check">建议携带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-med-3" /><span class="custom-check"></span><span class="item-copy"><strong>创可贴、碘伏棉签</strong><small>用于轻微擦伤；挖化石及森林活动时随身携带。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-med-4" /><span class="custom-check"></span><span class="item-copy"><strong>驱蚊液与止痒用品</strong><small>玉舍森林、火把节及酒店户外区域使用。</small></span><span class="status status--must">必带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="摄影 相机 索尼 A7R3 GH7 电池 充电器 存储卡 三脚架 防雨罩 CPL">
+          <div class="day-card__header"><h2>摄影与电子设备</h2><p>适合风光、家庭记录、瀑布和夜景</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-photo-1" /><span class="custom-check"></span><span class="item-copy"><strong>相机与旅游镜头</strong><small>建议选择一机一至两镜，避免全程负担过重。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-photo-2" /><span class="custom-check"></span><span class="item-copy"><strong>备用电池、充电器、存储卡</strong><small>出发前格式化存储卡并测试读写；每天晚上充电备份。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-photo-3" /><span class="custom-check"></span><span class="item-copy"><strong>相机防雨罩与镜头布</strong><small>黄果树和马岭河水汽大，建议随身放在摄影包外层。</small></span><span class="status status--check">强烈建议</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-photo-4" /><span class="custom-check"></span><span class="item-copy"><strong>CPL、轻便三脚架</strong><small>CPL用于水面和湿润植物；三脚架用于瀑布慢门、夜景和合照。</small></span><span class="status status--check">按需携带</span></label></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-photo-5" /><span class="custom-check"></span><span class="item-copy"><strong>手机、充电宝与数据线</strong><small>充电宝须符合交通携带规定，避免无标识产品。</small></span><span class="status status--must">必带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="儿童 研学 笔记本 彩笔 放大镜 望远镜 化石 刷子 密封袋">
+          <div class="day-card__header"><h2>儿童研学小包</h2><p>让孩子自己记录自然与工程发现</p></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-kid-1" /><span class="custom-check"></span><span class="item-copy"><strong>小笔记本、铅笔和彩笔</strong><small>记录喀斯特、桥梁、化石、森林及天眼问题。</small></span><span class="status status--check">推荐携带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-kid-2" /><span class="custom-check"></span><span class="item-copy"><strong>儿童望远镜 / 放大镜</strong><small>用于观察远处桥梁、山体及植物细节。</small></span><span class="status status--check">按需携带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-kid-3" /><span class="custom-check"></span><span class="item-copy"><strong>挖化石小用品</strong><small>旧衣服、小刷子、湿巾、密封袋和标签纸；以活动方要求为准。</small></span><span class="status status--check">活动前确认</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-kid-4" /><span class="custom-check"></span><span class="item-copy"><strong>安抚物与车内娱乐</strong><small>绘本、耳机、小玩具等，控制数量并方便收纳。</small></span><span class="status status--check">建议携带</span></label></div>
+        </section>
+
+        <section class="day-card" data-search="饮水 零食 保温杯 水果 饼干 面包 纸巾">
+          <div class="day-card__header"><h2>饮水与途中补给</h2><p>长途驾驶及景区排队备用</p></div>
+          <div class="checklist-item category-must"><label><input type="checkbox" data-id="p-food-1" /><span class="custom-check"></span><span class="item-copy"><strong>饮用水与保温杯</strong><small>车内分装，避免一次堆放过多影响空间。</small></span><span class="status status--must">必带</span></label></div>
+          <div class="checklist-item category-check"><label><input type="checkbox" data-id="p-food-2" /><span class="custom-check"></span><span class="item-copy"><strong>小包装零食</strong><small>面包、饼干、坚果、水果等，避免容易融化或气味浓的食品。</small></span><span class="status status--check">建议携带</span></label></div>
+        </section>
+      </div>
 
       <aside class="priority-note"><strong>优先处理：</strong>黄果树、中国天眼、关岭挖化石、马岭河峡谷、8月5日火把节节目和入场政策。建议出发前7天及前1天各复核一次。</aside>
     </main>
 
-    <footer>勾选状态仅保存在当前浏览器中</footer>
+    <footer>勾选状态仅保存在当前浏览器中｜包含景点预约与物品清单</footer>
   </div>
 </body>
 </html>
